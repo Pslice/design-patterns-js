@@ -1,6 +1,7 @@
 var Task = function (name) {
     this.name = name;
     this.completed = false;
+    this.newey = "Cool";
 }
 
 Task.prototype.complete = function () {
@@ -21,4 +22,5 @@ var UrgentTask = function (name, priority) {
     this.priority = priority;
 }
 var ut = new UrgentTask('Urg', 1);
-console.info(ut)
+console.info(ut);
+console.info(myTask);
