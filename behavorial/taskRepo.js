@@ -10,6 +10,9 @@ var repo = {
     save: function (task) {
         repo.tasks[task.id] = task;
         console.log(`Saving ${task.name} to the db`);
+    },
+    reply: function () {
+
     }
 }
 
@@ -29,5 +32,15 @@ repo.execute = function (name) {
 repo.execute('save', {
     id: 1,
     name: 'task 1',
+    completed: false
+});
+repo.execute('save', {
+    id: 2,
+    name: 'task 2',
+    completed: false
+});
+repo.execute('save', {
+    id: 3,
+    name: 'task 3',
     completed: false
 });
