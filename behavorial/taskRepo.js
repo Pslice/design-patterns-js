@@ -16,6 +16,13 @@ var repo = {
     }
 }
 
+repo.executeNoLog = function (name) {
+    var args = Array.prototype.slice.call(arguments, 1);
+    if (repo[name]) {
+        return repo[name].apply(repo, args)
+    }
+}
+
 repo.execute = function (name) {
     var args = Array.prototype.slice.call(arguments, 1);
 
